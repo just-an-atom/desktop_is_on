@@ -1,3 +1,5 @@
+#![windows_subsystem = "windows"]
+
 use desktop_online::post_it;
 use reqwest::Error;
 
