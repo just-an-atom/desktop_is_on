@@ -1,0 +1,10 @@
+[package]
+name = "desktop_online"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.37", features = ["full"] }
+reqwest = { version = "0.12.4", features = ["json"] }
+gethostname = "=0.4.3"
+dotenv = "0.15.0"
