@@ -8,7 +8,18 @@ pub async fn post_it() -> Result<(), Error> {
 
     // Use compile-time environment variable
     let url = env!("POST_URL");
-    let json_data = format!("{{\"title\": \"🟢 {} is now online!\"}}", pc_name_str);
+    let _icon = env!("ICON");
+    let _tail = env!("TAIL");
+
+    println!("{}", _icon);
+    println!("{}", _tail);
+
+    let json_data = format!(
+        "{{\"title\": \"{icon} {name} {tail}\"}}",
+        icon = _icon,
+        name = pc_name_str,
+        tail = _tail
+    );
 
     println!("Debug Info: POST_URL = {}", url); // Debug print
     println!("Debug Info: JSON Data = {}", json_data); // Debug print
